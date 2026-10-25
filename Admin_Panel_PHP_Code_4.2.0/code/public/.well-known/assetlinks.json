@@ -1,0 +1,38 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.news.wrteam",
+            "sha256_cert_fingerprints": [
+                "76:59:AA:52:62:4F:BA:9E:B8:2B:D8:C5:19:90:5D:4A:30:79:12:24:6B:43:8E:59:2E:EE:F3:87:88:38:5F:E2"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.news.wrteam",
+            "sha256_cert_fingerprints": [
+                "49:51:64:28:35:2B:35:67:22:62:0F:8D:98:1D:68:2C:D5:0D:F5:5D:BD:BB:0C:AD:DE:16:6C:5D:11:67:0F:78"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.news.wrteam",
+            "sha256_cert_fingerprints": [
+                "96:60:B7:7D:12:E3:33:FC:5B:21:AB:67:C3:E8:E1:FE:24:37:68:F6:16:8C:FB:FF:DC:E0:FB:73:48:53:5E:80"
+            ]
+        }
+    }
+]

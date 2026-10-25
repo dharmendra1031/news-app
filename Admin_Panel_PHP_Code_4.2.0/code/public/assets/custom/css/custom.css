@@ -1,0 +1,1249 @@
+/* TailAdmin original font: Outfit */
+:root {
+    --font-family-sans-serif: "Outfit", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* SweetAlert2 toasts must overlay everything on screen (header, modals, etc.) */
+.swal2-container.swal2-top,
+.swal2-container.swal2-top-start,
+.swal2-container.swal2-top-end {
+    top: 0 !important;
+    z-index: 99999 !important;
+}
+.flipswitch {
+    position: relative;
+    width: 100px;
+}
+.flipswitch input[type="checkbox"] {
+    display: none;
+}
+.flipswitch-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid #999999;
+    border-radius: 50px;
+}
+.flipswitch-inner {
+    width: 200%;
+    margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.flipswitch-inner:before, .flipswitch-inner:after {
+    float: left;
+    width: 50%;
+    height: 30px;
+    padding: 0;
+    line-height: 30px;
+    font-size: 20px;
+    color: white;
+    font-family: Trebuchet, Arial, sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+.flipswitch-inner:before {
+    content: "ON";
+    padding-left: 18px;
+    background-color: #437a99;
+    color: #ffffff;
+}
+.flipswitch-inner:after {
+    content: "OFF";
+    padding-right: 18px;
+    background-color: #ffffff;
+    color: #437a99;
+    text-align: right;
+}
+.flipswitch-switch {
+    width: 35px;
+    margin: -2.5px;
+    background: #ffffff;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 67px;
+    transition: all 0.3s ease-in 0s;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-inner {
+    margin-left: 0;
+}
+.flipswitch-cb:checked + .flipswitch-label .flipswitch-switch {
+    right: 0;
+}
+.border {
+    border: 1px solid var(--ta-gray-200, #E4E7EC);
+}
+.logo .filepond--list .filepond--item {
+    width: 100%;
+    min-height: 10px !important;
+}
+.filepond--item {
+    display: flex;
+    width: 220px;
+    padding: 0px 15px;
+    min-height: 260px;
+    margin-bottom: 15px;
+}
+.section .section-header {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+    background-color: #fff;
+    border-radius: var(--ta-radius-2xl, 1rem);
+    border: 1px solid var(--ta-gray-200, #E4E7EC);
+    position: relative;
+    margin-bottom: 30px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+.toggleButttonPostition {
+    font-size: var(--text-theme-xl, 1.25rem);
+    color: var(--ta-gray-800, #1D2939);
+    font-weight: 600;
+    position: relative;
+    margin: 30px 0 25px 0;
+}
+.images_border {
+    border-radius: var(--ta-radius-lg, 0.5rem);
+}
+/* Admin settings / user dropdown in header: no pill background,
+   follows light/dark theme instead of being tinted with primary color. */
+.navbar_dropdown,
+html[data-theme-mode='dark'] .navbar_dropdown,
+body[data-theme-mode='dark'] .navbar_dropdown {
+    border-radius: var(--ta-radius-lg, 0.5rem);
+    background-color: transparent !important;
+    box-shadow: none !important;
+    transition: background-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+.navbar_dropdown:hover,
+html[data-theme-mode='dark'] .navbar_dropdown:hover,
+body[data-theme-mode='dark'] .navbar_dropdown:hover {
+    background-color: var(--ta-hover, rgba(0,0,0,0.04)) !important;
+    box-shadow: none;
+}
+/* Toggle text/icons follow the theme (no more white-on-primary) */
+.main-header .navbar_dropdown .nav-link,
+.main-header .navbar_dropdown .nav-link:hover,
+html[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link,
+body[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link {
+    color: var(--ta-text-primary, #344054) !important;
+}
+html[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link,
+body[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link {
+    color: var(--ta-text-primary, #f9fafb) !important;
+}
+html[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link i,
+body[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link i,
+html[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link .user-chevron,
+body[data-theme-mode='dark'] .main-header .navbar_dropdown .nav-link .user-chevron {
+    color: var(--ta-text-secondary, #98a2b3) !important;
+}
+.bg-purple-new {
+    background-color: #d4c6ec !important;
+}
+.text-purple-new {
+    color: #a779f6;
+}
+.bg-red-new {
+    background-color: rgba( 181, 32, 70, 0.12 ) !important;
+}
+.text-red-new {
+    color: #b52046;
+}
+.bg-grey-new {
+    background-color: rgba( 84, 98, 125, 0.5 ) !important;
+    border: 1px solid #54627d;
+}
+.text-grey-new {
+    color: #54627d;
+}
+.bg-blue-new {
+    background-color: rgba(66, 133, 244, 0.12);
+}
+.text-blue-new {
+    color: #4285f4;
+}
+.bg-green-new {
+    background-color: rgba(52, 168, 83, 0.12) !important;
+}
+.text-green-new {
+    color: #34a853;
+}
+.bg-orange-new {
+    background-color: #fff1df !important;
+}
+.text-orange-new {
+    color: #ffa53e;
+}
+.bg-sky-new {
+    background-color: #d7f2fc !important;
+}
+.text-sky-new {
+    color: #00b9ff;
+}
+.bg-pink-new {
+    background-color: rgba(255, 84, 109, 0.12) !important;
+}
+.text-pink-new {
+    color: #ff546d;
+}
+#RNews-card {
+    background-color: #fff;
+    border: 1px solid var(--ta-gray-200, #E4E7EC);
+    border-radius: var(--ta-radius-2xl, 1rem);
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+#RNews-card:hover {
+    box-shadow: var(--ta-shadow-md, 0px 4px 8px -2px rgba(16,24,40,0.1), 0px 2px 4px -2px rgba(16,24,40,0.06));
+}
+#RNews-image {
+    aspect-ratio: 1/1;
+    border-radius: var(--ta-radius-lg, 0.5rem);
+    margin: 10px 0 10px 10px;
+    max-width: 20%;
+    object-fit: cover;
+}
+#RNews-card-body {
+    padding-top: 3px;
+    width: 70%;
+}
+#RNews-card-text {
+    margin: 3%;
+}
+#btnRNewsCatagory {
+    background: var(--ta-brand, #465FFF);
+    color: #fff;
+    margin-left: 3%;
+    margin-top: 3%;
+    width: fit-content;
+    border-radius: var(--ta-radius-lg, 0.5rem);
+    padding: 0.5rem 1rem;
+    font-size: var(--text-theme-sm, 0.875rem);
+    font-weight: 500;
+}
+#languageDropdown {
+    max-height: 200px;
+    overflow-y: auto;
+}
+.scrollable-menu {
+    max-height: 100%;
+    overflow-y: auto;
+}
+#refresh {
+    height: 40px !important;
+}
+.current_language {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    color: var(--ta-gray-500, #667085);
+    text-transform: uppercase;
+    border: 1px solid var(--ta-gray-200, #E4E7EC);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    padding: 0;
+    line-height: 1;
+    margin: 0 0.625rem 0 0;
+    text-align: center;
+    vertical-align: middle;
+}
+input[type="checkbox"] {
+    accent-color: var(--ta-brand, #465FFF);
+}
+.o-media--middle {
+    align-items: center;
+}
+.o-media {
+    display: flex;
+    align-items: flex-start;
+}
+.images_in_card {
+    height: 50px;
+    width: 50px;
+    border-radius: var(--ta-radius-lg, 0.5rem);
+}
+.o-media__img {
+    margin-right: 1.5rem;
+}
+.provider_name_table {
+    text-align: left;
+}
+.provider_email_table {
+    text-align: left;
+}
+.card-comments .card-comment:first-of-type {
+    padding: 10px;
+}
+.card-comments .card-comment {
+    border-bottom: 1px solid var(--ta-gray-200, #E4E7EC);
+    padding: 8px ;
+}
+.custom-link {
+    color: var(--ta-gray-800, #1D2939);
+}
+.custom-link:hover {
+    color: var(--ta-brand, #465FFF);
+}
+.sidebar-new-title {
+    margin: 1.1rem .25rem .5rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #667085;
+    font-weight: 700;
+    font-family: "Inter", "Outfit", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.4;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    opacity: 1;
+}
+.card {
+    transition: height 0.3s;
+    overflow: visible;
+}
+.card-expanded {
+    height: 600px;
+}
+.tagify {
+    --tag-bg: var(--primary-color) !important;
+    --tag-border-radius: var(--ta-radius-3xl, 1.5rem) !important;
+    --tag-text-color: white !important;
+    --tag-remove-btn-bg--hover: red !important;
+    --tag-hover: var(--primary-color) !important;
+    --tag-remove-bg: var(--primary-color) !important;
+    border-radius: var(--ta-radius-lg, 0.5rem) !important;
+}
+.tagify__tag__removeBtn:hover {
+    color: #fff;
+    background: var(--secondary-color) !important;
+}
+.setting_active_tab:hover {
+    color: inherit;
+    transition: 0.5s ease-in-out;
+    border-color: var(--primary-color, var(--ta-brand, #465fff)) !important;
+    box-shadow: 0 8px 24px -6px rgba(70, 95, 255, 0.28);
+    box-shadow:
+        0 8px 24px -6px color-mix(in srgb, var(--primary-color, var(--ta-brand, #465fff)) 28%, transparent),
+        0 2px 8px -2px color-mix(in srgb, var(--primary-color, var(--ta-brand, #465fff)) 18%, transparent);
+}
+.setting_active_tab:hover .bg-primary {
+    background: var(--ta-gray-500, #667085) !important;
+    color: #fff !important;
+}
+.setting_active_tab:hover a {
+    color: inherit;
+}
+.setting_active_tab:hover .icon_font_size {
+    color: var(--primary-color, var(--ta-brand, #465fff)) !important;
+}
+.setting_active_tab .title {
+    color: var(--ta-gray-700, #344054);
+    font-weight: 400;
+}
+html[data-theme-mode="dark"] .setting_active_tab .title,
+body[data-theme-mode="dark"] .setting_active_tab .title {
+    color: #ffffff !important;
+}
+html[data-theme-mode="dark"] .setting_active_tab .arrow_icon,
+body[data-theme-mode="dark"] .setting_active_tab .arrow_icon {
+    color: #ffffff !important;
+}
+.setting_active_tab:hover .title {
+    color: var(--ta-gray-700, #344054);
+}
+.setting_active_tab:hover .arrow_icon {
+    color: var(--ta-gray-500, #667085) !important;
+}
+html[data-theme-mode="dark"] .setting_active_tab:hover .title,
+body[data-theme-mode="dark"] .setting_active_tab:hover .title,
+html[data-theme-mode="dark"] .setting_active_tab:hover .arrow_icon,
+body[data-theme-mode="dark"] .setting_active_tab:hover .arrow_icon {
+    color: #ffffff !important;
+}
+.setting_active_tab:hover .provider_a,
+.setting_active_tab .provider_a {
+    background: var(--ta-icon-tint, #ecf3ff) !important;
+    background: color-mix(in srgb, var(--primary-color, var(--ta-brand, #465fff)) 11%, #ffffff) !important;
+}
+.setting_active_tab .provider_a .icon_font_size,
+.setting_active_tab:hover .provider_a .icon_font_size {
+    color: var(--primary-color, var(--ta-brand, #465fff)) !important;
+}
+.setting_active_tab:hover .bg-emerald-success {
+    background: var(--ta-gray-500, #667085);
+    transition: background 0.5s ease-in-out, color 0.2s ease-in-out;
+    color: #fff;
+}
+.setting_active_tab:hover span {
+    color: inherit;
+}
+.icon_font_size {
+    font-size: 30px !important;
+}
+.setting_active_tab {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    transition:
+        box-shadow 0.3s ease-in-out,
+        border-color 0.3s ease-in-out;
+}
+.setting_active_tab:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.5s ease-in-out, background 0.5s ease-in-out;
+    z-index: -1;
+}
+.setting_active_tab:hover:before {
+    width: 0;
+    background: transparent;
+}
+/* System Settings card view — center the icon block in every card */
+.setting_active_tab .content {
+    justify-content: center;
+    padding: 1.25rem 0.75rem 0.5rem;
+}
+.setting_active_tab .content .row {
+    width: auto;
+}
+.provider_a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.os-theme-light > .os-scrollbar > .os-scrollbar-track > .os-scrollbar-handle {
+    background: var(--ta-brand, #465FFF);
+}
+/* Sidebar scrollbar — hidden visually, scrolling still works (native overflow
+   scroll on .main-sidebar + OverlayScrollbars wheel handling remain active) */
+.main-sidebar .os-scrollbar {
+    display: none !important;
+}
+.main-sidebar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.main-sidebar::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+option:checked, option:hover {
+    background-color: var(--primary-color) !important;
+    color: #fff;
+}
+option:not(:checked) {
+    background-color: #fff;
+}
+/* 1.38 Empty States */
+.empty-state {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+}
+.empty-state .empty-state-icon {
+    position: relative;
+    background-color: var(--ta-brand, #465FFF);
+    width: 80px;
+    height: 80px;
+    line-height: 100px;
+    border-radius: var(--ta-radius-xl, 0.75rem);
+}
+.empty-state .empty-state-icon i {
+    font-size: 40px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+.empty-state h2 {
+    font-size: 20px;
+    margin-top: 30px;
+}
+.empty-state p {
+    font-size: 16px;
+}
+.required:after {
+    content: "*";
+    position: relative;
+    font-size: inherit;
+    color: var(--danger);
+    padding-left: 0;
+    font-weight: 600;
+}
+.tagify__tag {
+    overflow: hidden !important;
+}
+.bigdrop {
+    width: 100px !important;
+}
+#news_id option {
+    width: 100px !important;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.tagify__tag__removeBtn {
+    color: white !important;
+}
+#sortable-row li {
+    margin-bottom: 4px;
+    padding: 10px;
+    background-color: var(--ta-gray-100, #F2F4F7);
+    border: 1px solid var(--ta-gray-200, #E4E7EC);
+    border-radius: var(--ta-radius-lg, 0.5rem);
+    cursor: move;
+    position: relative;
+}
+#sortable-row li.ui-state-highlight {
+    height: 1em;
+    background-color: var(--ta-gray-50, #F9FAFB);
+    border: var(--ta-gray-300, #D0D5DD) 2px dotted;
+}
+select[readonly] {
+    pointer-events: none;
+    background-color: var(--ta-gray-100, #F2F4F7);
+    border-color: var(--ta-gray-200, #E4E7EC);
+    border-radius: var(--ta-radius-lg, 0.5rem);
+}
+.description-container {
+    position: relative;
+}
+.short-desc {
+    word-break: break-word;
+}
+.full-desc {
+    word-break: break-word;
+}
+.toggle-desc {
+    display: inline-block;
+    margin-top: 5px;
+    color: var(--ta-brand, #465FFF);
+    cursor: pointer;
+}
+.edit-data{
+    cursor: pointer;
+}
+.delete-form{
+    cursor: pointer;
+}
+/* Right-align submit buttons in card footers (TailAdmin) */
+.card-footer:has(button[type="submit"]) {
+    display: flex;
+    justify-content: flex-end;
+}
+/* Bottom corners of footer match the card radius (mirrors .card > .card-header top radius).
+   Border merge: footer sits flush inside .card, so drop its side/bottom borders and keep
+   only the top divider — avoids the double "boxed-in" outline seen on inset footers. */
+.card-footer:last-child {
+    border-bottom-left-radius: calc(var(--ta-radius-2xl, 1rem) - 1px);
+    border-bottom-right-radius: calc(var(--ta-radius-2xl, 1rem) - 1px);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+/* --- Sidebar link text: darker in light mode, lighter in dark mode --- */
+/* Bigger sidebar icons & text */
+.main-sidebar .nav-sidebar > .nav-item > .nav-link {
+    font-size: 1rem;
+}
+.main-sidebar .nav-sidebar > .nav-item > .nav-link i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link .nav-icon {
+    font-size: 1.4rem;
+    width: 26px;
+    min-width: 26px;
+}
+.main-sidebar .nav-sidebar > .nav-item > .nav-link,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link p,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link i {
+    color: #1D2939;
+}
+body[data-theme='tailadmin'] .sidebar-new-title {
+    color: #667085;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+/* --- Selected sidebar tab: slight primary tint bg + primary text --- */
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link p,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link p,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link i,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link i,
+html[data-theme-mode='dark'] body[data-theme='tailadmin'] .sidebar-new-title,
+body[data-theme-mode='dark'] body[data-theme='tailadmin'] .sidebar-new-title {
+    color: #EAECF0 !important;
+    font-weight: 700;
+}
+/* --- Selected sidebar tab: slight primary tint bg + primary text (incl. dark mode) --- */
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+.main-sidebar .nav-sidebar .nav-item.has-treeview.menu-open > .nav-link,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active {
+    background-color: color-mix(in srgb, var(--primary-color, #465FFF) 15%, transparent) !important;
+}
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active p,
+.main-sidebar .nav-sidebar .nav-item.has-treeview.menu-open > .nav-link,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active p,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active p {
+    color: var(--primary-color, #465FFF) !important;
+}
+/* --- Sidebar icons: muted low-contrast grey, active in softened primary --- */
+.main-sidebar .nav-sidebar > .nav-item > .nav-link i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link .nav-icon,
+.main-sidebar .nav-treeview > .nav-item > .nav-link i,
+.main-sidebar .nav-treeview > .nav-item > .nav-link .nav-icon {
+    color: #585c64 !important;
+    opacity: 0.8;
+}
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+.main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon,
+.main-sidebar .nav-sidebar .nav-item.has-treeview.menu-open > .nav-link i,
+.main-sidebar .nav-sidebar .nav-item.has-treeview.menu-open > .nav-link .nav-icon,
+.main-sidebar .nav-treeview > .nav-item > .nav-link.active i,
+.main-sidebar .nav-treeview > .nav-item > .nav-link.active .nav-icon {
+    color: #909FFF !important;
+    color: color-mix(in srgb, var(--primary-color, #465FFF) 60%, #FFFFFF) !important;
+    opacity: 1;
+}
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link i,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link i,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link .nav-icon,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link .nav-icon,
+html[data-theme-mode='dark'] .main-sidebar .nav-treeview > .nav-item > .nav-link i,
+body[data-theme-mode='dark'] .main-sidebar .nav-treeview > .nav-item > .nav-link i,
+html[data-theme-mode='dark'] .main-sidebar .nav-treeview > .nav-item > .nav-link .nav-icon,
+body[data-theme-mode='dark'] .main-sidebar .nav-treeview > .nav-item > .nav-link .nav-icon {
+    color: #98A2B3 !important;
+    opacity: 0.65;
+}
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link:hover i,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link:hover i,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link:hover .nav-icon,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link:hover .nav-icon {
+    color: #D0D5DD !important;
+    opacity: 1;
+}
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon {
+    color: #909FFF !important;
+    color: color-mix(in srgb, var(--primary-color, #465FFF) 60%, #FFFFFF) !important;
+    opacity: 1;
+}
+/* --- Info-box text: same size as sidebar text --- */
+.info-box .info-box-text {
+    font-size: 1rem;
+}
+/* --- Table header text: darker in light mode, lighter in dark mode --- */
+.table thead th {
+    color: #344054;
+}
+html[data-theme-mode='dark'] .table thead th,
+body[data-theme-mode='dark'] .table thead th {
+    color: #D0D5DD;
+}
+/* --- Round language picker: language code + icon in one button --- */
+.main-header .language-picker .dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 0.4rem;
+    height: 40px;
+    padding: 0 0.75rem 0 0.6rem !important;
+    border: 1px solid var(--ta-gray-200, #E4E7EC);
+    border-radius: 9999px;
+    background-color: #FFFFFF;
+    color: var(--ta-gray-600, #475467);
+    white-space: nowrap;
+    line-height: 1;
+}
+.main-header .language-picker .dropdown-toggle .language-code {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+.main-header .language-picker .dropdown-toggle i {
+    display: inline-block;
+    font-size: 1.35rem;
+    color: #475467;
+    line-height: 1;
+}
+.main-header .language-picker .dropdown-toggle::after {
+    display: none;
+}
+.main-header .language-picker .dropdown-toggle:hover,
+.main-header .language-picker .dropdown-toggle:focus {
+    background-color: var(--ta-gray-50, #F9FAFB);
+    color: var(--ta-gray-900, #101828);
+}
+/* Dark mode: black background, light text */
+html[data-theme-mode='dark'] .main-header .language-picker .dropdown-toggle,
+body[data-theme-mode='dark'] .main-header .language-picker .dropdown-toggle {
+    background-color: #000000;
+    border-color: var(--ta-border, #1D2939);
+    color: var(--ta-text-primary, #F9FAFB);
+}
+html[data-theme-mode='dark'] .main-header .language-picker .dropdown-toggle i,
+body[data-theme-mode='dark'] .main-header .language-picker .dropdown-toggle i {
+    color: #F9FAFB !important;
+}
+html[data-theme-mode='dark'] .main-header .language-picker .dropdown-toggle:hover,
+body[data-theme-mode='dark'] .main-header .language-picker .dropdown-toggle:hover {
+    background-color: #101828;
+    color: #FFFFFF;
+}
+/* --- Dashboard infobox responsive tweaks --- */
+@media (max-width: 1200px) and (min-width: 1000px) {
+    .info-box-icon {
+        width: 48px;
+        height: 48px;
+        margin: 0 0.75rem;
+        font-size: 1.2rem;
+    }
+    .info-box-content {
+        padding: 0.75rem 0.75rem 0.75rem 0;
+    }
+}
+@media (max-width: 999px) {
+    .info-box-icon {
+        width: 44px;
+        height: 44px;
+        margin: 0 0.625rem;
+        font-size: 1.1rem;
+    }
+    .info-box-content {
+        padding: 0.625rem 0.625rem 0.625rem 0;
+    }
+}
+/* Remove black focus ring on header icon buttons in dark mode */
+[data-theme-mode="dark"] .main-header .header-icon-btn:focus,
+[data-theme-mode="dark"] .main-header .header-icon-btn:focus-visible,
+[data-theme-mode="dark"] .main-header .navbar_dropdown > .nav-link:focus,
+[data-theme-mode="dark"] .main-header .navbar_dropdown > .nav-link:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+/* Native date/time pickers follow dark mode */
+[data-theme-mode="dark"] {
+    color-scheme: dark;
+}
+[data-theme-mode="dark"] input[type="date"],
+[data-theme-mode="dark"] input[type="datetime-local"],
+[data-theme-mode="dark"] input[type="time"],
+[data-theme-mode="dark"] input[type="month"] {
+    background-color: #101828;
+    border-color: #344054;
+    color: rgba(255, 255, 255, 0.90);
+    border-radius: var(--ta-radius-lg, 0.5rem);
+}
+[data-theme-mode="dark"] input[type="date"]::-webkit-calendar-picker-indicator,
+[data-theme-mode="dark"] input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+[data-theme-mode="dark"] input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    border-radius: var(--ta-radius-lg, 0.5rem);
+}
+
+/* Dark-mode selected tab overrides */
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active p,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active p,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active i,
+html[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon,
+body[data-theme-mode='dark'] .main-sidebar .nav-sidebar > .nav-item > .nav-link.active .nav-icon {
+    background-color: #1D2939 !important; /* neutral surface */
+    color: color-mix(in srgb, var(--primary-color, #465FFF) 35%, #FFFFFF) !important;
+}
+
+/* Meta title SEO counter: show live hint, but never show empty placeholder.
+   JS clears the element (innerHTML="" + display:none) when input is empty,
+   so :empty covers any counter not yet initialised by JS. */
+#meta_title_count:empty,
+#edit_meta_title_count:empty,
+.seo-hint:empty {
+    display: none;
+}
+
+/* Bulk delete toolbar: hidden by default, shown by JS only when at least
+   one bootstrap-table row is selected (see custom.js toggleBulkToolbar).
+   Applies to every list view since all use div#toolbar + data-toolbar. */
+div[id="toolbar"] {
+    display: none;
+}
+div[id="toolbar"].bulk-visible {
+    display: block;
+}
+/* Toolbars that also hold filters (e.g. Tag language filter): always
+   visible as a flex row; only the bulk button inside is selection-gated. */
+div[id="toolbar"].toolbar-with-filter {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+div[id="toolbar"].toolbar-with-filter select {
+    min-width: 150px;
+    width: auto;
+    flex: 0 1 auto;
+}
+/* Labeled filter items stack label above select; bulk button drops to
+   select level so everything shares one baseline */
+div[id="toolbar"].toolbar-with-filter .toolbar-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+div[id="toolbar"].toolbar-with-filter .toolbar-filter label {
+    margin-bottom: 2px;
+}
+div[id="toolbar"].toolbar-with-filter > .btn {
+    align-self: flex-end;
+}
+
+/* Create-form cards are toggled via slideToggle; hide by default in CSS too
+   so there is no flash of the open form (and no layout jump) before
+   custom.js runs. jQuery show()/slideToggle() still work (inline style). */
+#add_card {
+    display: none;
+}
+
+/* List card headers: equal space above/below the label. The h3.card-title
+   carries reboot's 0.5rem bottom margin, which made the gap under the
+   label bigger than the one above — reset it (applies to all index views). */
+.card-header .card-title {
+    margin-bottom: 0 !important;
+}
+
+/* Bootstrap-table toolbar: Search + Refresh + Columns in one
+   vertically-aligned row on all screens. Replaces bootstrap-table's
+   floats so the input and buttons share a baseline and equal height
+   (buttons are min-height 38px in tailadmin.bundle.min.css). */
+.bootstrap-table .fixed-table-toolbar {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+}
+.bootstrap-table .fixed-table-toolbar .bs-bars,
+.bootstrap-table .fixed-table-toolbar .search,
+.bootstrap-table .fixed-table-toolbar .columns {
+    float: none !important;
+}
+/* Visual order: Bulk Delete | Search | Refresh+Columns (DOM has columns before search).
+   Search group is pinned right with margin-left:auto so it stays right
+   whether or not Bulk Delete is visible; Bulk Delete stays left when shown. */
+.bootstrap-table .fixed-table-toolbar .bs-bars {
+    order: 1;
+}
+.bootstrap-table .fixed-table-toolbar .bs-bars:has(div[id="toolbar"].toolbar-with-filter) {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+.bootstrap-table .fixed-table-toolbar .search {
+    order: 2;
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto !important;
+}
+.bootstrap-table .fixed-table-toolbar .columns {
+    order: 3;
+    display: flex !important;
+    align-items: center !important;
+}
+.bootstrap-table .fixed-table-toolbar .search input.search-input,
+.bootstrap-table .fixed-table-toolbar .search input {
+    height: 38px !important;
+}
+
+/* Bootstrap-table toolbar: keep Bulk Delete + Search + Refresh + Columns
+   on a single responsive row on mobile. Overrides the stacked full-width
+   mobile rules in tailadmin.bundle.min.css (@media max-width: 575.98px).
+   custom.css loads last, so equal specificity wins; !important guards
+   against float/width utilities from bootstrap-table. */
+@media (max-width: 575.98px) {
+    .bootstrap-table .fixed-table-toolbar {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+        gap: 0.5rem !important;
+    }
+    .bootstrap-table .fixed-table-toolbar .bs-bars,
+    .bootstrap-table .fixed-table-toolbar .search,
+    .bootstrap-table .fixed-table-toolbar .columns {
+        width: auto !important;
+        min-width: 0 !important;
+        float: none !important;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    /* Visual order: Bulk Delete | Search | Refresh+Columns (DOM has columns before search) */
+    .bootstrap-table .fixed-table-toolbar .bs-bars {
+        order: 1;
+        flex: 0 0 auto;
+    }
+    .bootstrap-table .fixed-table-toolbar .search {
+        order: 2;
+        flex: 1 1 auto;
+    }
+    .bootstrap-table .fixed-table-toolbar .columns {
+        order: 3;
+        flex: 0 0 auto;
+    }
+    /* Compact buttons that shrink with the screen instead of going full-width.
+       NOTE: no !important on display — custom.js hides the bulk button via
+       inline display:none until a row is selected, and !important would
+       override that and force it visible on mobile. */
+    .bootstrap-table .fixed-table-toolbar #toolbar .btn,
+    .bootstrap-table .fixed-table-toolbar div[id="toolbar"] .btn,
+    .bootstrap-table .fixed-table-toolbar .btn.bg-primary.text-white {
+        width: auto !important;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap !important;
+        word-break: normal !important;
+        padding: 0.5rem 0.75rem !important;
+        font-size: 0.8125rem !important;
+        flex-shrink: 0;
+    }
+    .bootstrap-table .fixed-table-toolbar .search input.search-input,
+    .bootstrap-table .fixed-table-toolbar .search input {
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+    .bootstrap-table .fixed-table-toolbar .columns .btn-group {
+        display: inline-flex !important;
+        flex-wrap: nowrap !important;
+        flex-shrink: 0;
+    }
+    .bootstrap-table .fixed-table-toolbar .columns .btn {
+        padding: 0.5rem 0.6rem !important;
+        flex-shrink: 0;
+    }
+    /* Toolbars with filters may wrap on small screens instead of squeezing */
+    .bootstrap-table .fixed-table-toolbar:has(div[id="toolbar"].toolbar-with-filter) {
+        flex-wrap: wrap !important;
+    }
+    .bootstrap-table .fixed-table-toolbar:has(div[id="toolbar"].toolbar-with-filter) .bs-bars {
+        flex: 1 1 100%;
+    }
+}
+
+/* Featured-section style picker (app/web style radio images): on phones,
+   show 2 per row with natural image aspect. Overrides the 6-across 16.6%
+   squeeze (adminlte bundle, max-width:768px) that overflows and overlaps
+   the images on narrow screens. Applies to both create form and edit modal. */
+@media (max-width: 575.98px) {
+    div.col-md-2:has(> label.radio-img),
+    div.col-md-2:has(> label.radio-img-web) {
+        flex: 0 0 50% !important;
+        max-width: 50% !important;
+        width: 50% !important;
+        margin-bottom: 0.75rem;
+    }
+    .radio-img,
+    .radio-img-web,
+    .edit-radio-img,
+    .edit-radio-img-web {
+        height: auto !important;
+        min-height: 120px;
+        padding: 8px;
+        overflow: hidden;
+    }
+    .radio-img > .style_image,
+    .radio-img-web > .style_image {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100%;
+        max-height: 220px;
+        object-fit: contain;
+    }
+}
+
+/* Main content area (all views + dashboard): drop the centered 1440px cap so
+   the content uses the full width with small, equal gutters on both sides
+   instead of large uneven gaps next to the sidebar. */
+section.content > .container-fluid,
+.content-header > .container-fluid {
+    max-width: none;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+/* Row operate (⋮) dropdown toggles: neutral grey instead of brand color */
+.btn.operatebtn {
+    background-color: var(--ta-gray-500, #667085) !important;
+    border-color: var(--ta-gray-500, #667085) !important;
+    color: #fff !important;
+}
+.btn.operatebtn:hover,
+.btn.operatebtn:focus,
+.btn.operatebtn:active {
+    background-color: var(--ta-gray-600, #475467) !important;
+    border-color: var(--ta-gray-600, #475467) !important;
+    color: #fff !important;
+}
+/* Dark mode: operate toggle takes a dark shade … */
+html[data-theme-mode="dark"] .btn.operatebtn,
+body[data-theme-mode="dark"] .btn.operatebtn {
+    background-color: #1D2939 !important;
+    border-color: #344054 !important;
+    color: #F2F4F7 !important;
+}
+html[data-theme-mode="dark"] .btn.operatebtn:hover,
+html[data-theme-mode="dark"] .btn.operatebtn:focus,
+html[data-theme-mode="dark"] .btn.operatebtn:active,
+body[data-theme-mode="dark"] .btn.operatebtn:hover,
+body[data-theme-mode="dark"] .btn.operatebtn:focus,
+body[data-theme-mode="dark"] .btn.operatebtn:active {
+    background-color: #344054 !important;
+    border-color: #475467 !important;
+    color: #fff !important;
+}
+/* …while its dropdown box stays a bit lighter than the dark surfaces
+   so the menu is clearly visible. Scoped to list tables only. */
+html[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu,
+body[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu {
+    background-color: #243044 !important;
+    border-color: #475467 !important;
+}
+html[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu .dropdown-item,
+body[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu .dropdown-item {
+    color: #E4E7EC !important;
+}
+html[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu .dropdown-item:hover,
+html[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu .dropdown-item:focus,
+body[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu .dropdown-item:hover,
+body[data-theme-mode="dark"] table[data-toggle="table"] .dropdown-menu .dropdown-item:focus {
+    background-color: #344054 !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+ * FOUC fix: bootstrap-table init flash on module switch
+ * ------------------------------------------------------------
+ * Problem (see NewsBuzz video): every list view renders a raw
+ * <table data-toggle="table"> with ALL <th> visible (including
+ * data-visible="false" meta/slug columns). Only after
+ * bootstrap-table.js runs are hidden columns removed, the
+ * toolbar moved into .bs-bars and search/refresh/columns
+ * buttons built — so users briefly see a cramped, unstyled
+ * table + misplaced toolbar before the proper view appears.
+ *
+ * Fix (pure CSS, applies to all ~30 list views at once):
+ * - Pre-init the raw table is a direct child of .card-body, so
+ *   hide it with visibility:hidden (keeps layout, no jump).
+ * - bootstrap-table wraps the table in div.bootstrap-table on
+ *   init, so the "direct child" selector stops matching and the
+ *   formatted table shows automatically — no JS timing needed.
+ * - Same gating for #toolbar.toolbar-with-filter (filters +
+ *   Bulk Delete): hidden until moved inside .bootstrap-table.
+ * - A spinner placeholder keeps the card from looking broken
+ *   during the (short) hidden phase; it also disappears
+ *   automatically once the table is wrapped.
+ * - body.bt-fallback-show (set by custom.js after a timeout) is
+ *   the safety net if bootstrap-table JS ever fails to load.
+ * ============================================================ */
+
+/* 1. Hide raw server-rendered table until bootstrap-table wraps it */
+.card-body > table[data-toggle="table"] {
+    visibility: hidden !important;
+}
+
+/* 2. Formatted table inside bootstrap-table wrapper is always visible */
+.bootstrap-table table[data-toggle="table"] {
+    visibility: visible !important;
+}
+
+/* 3. Hide filter toolbar until bootstrap-table moves it into .bs-bars.
+   (Plain #toolbar without filters is already display:none by default.) */
+div[id="toolbar"].toolbar-with-filter {
+    display: none !important;
+}
+.bootstrap-table div[id="toolbar"].toolbar-with-filter {
+    display: flex !important;
+}
+
+/* 4. Loading placeholder while the raw table is hidden */
+.card-body:has(> table[data-toggle="table"]) {
+    position: relative;
+    min-height: 220px;
+}
+.card-body:has(> table[data-toggle="table"])::after {
+    content: "";
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    width: 36px;
+    height: 36px;
+    margin-left: -18px;
+    border-radius: 50%;
+    border: 3px solid var(--ta-gray-200, #E4E7EC);
+    border-top-color: var(--primary-color, var(--ta-brand, #465FFF));
+    animation: bt-fouc-spin 0.8s linear infinite;
+    pointer-events: none;
+}
+@keyframes bt-fouc-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* 5. Safety net: if bootstrap-table JS fails, custom.js adds
+   .bt-fallback-show to <body> so content is never stuck hidden */
+body.bt-fallback-show .card-body > table[data-toggle="table"],
+body.bt-fallback-show div[id="toolbar"].toolbar-with-filter {
+    display: block !important;
+    visibility: visible !important;
+}
+body.bt-fallback-show div[id="toolbar"].toolbar-with-filter {
+    display: flex !important;
+}
+body.bt-fallback-show .card-body:has(> table[data-toggle="table"])::after {
+    display: none !important;
+}
+
+/* ============================================================
+ * Operate-column dropdown vs. rounded table border
+ * ------------------------------------------------------------
+ * Problem: .fixed-table-container needs overflow:hidden so the
+ * inner <table>'s square corners are clipped by the container
+ * radius (that is what makes the table border look clean). But
+ * every overflow:hidden|auto|scroll ancestor also clips the
+ * absolutely positioned .dropdown-menu of the operate column.
+ *
+ * The bundle "fixed" it by forcing the container to
+ * overflow:visible (tailadmin.bundle.min.css:12598-12617), which
+ * unclips the menu but breaks the border/radius and kills the
+ * mobile horizontal scroll. Note overflow-x:auto +
+ * overflow-y:visible is invalid per CSS spec: when one axis is not
+ * visible the other computes to auto, so the menu stayed clipped
+ * anyway.
+ *
+ * Fix: the container keeps overflow:hidden (border stays correct)
+ * and custom.js detaches the operate menu to <body>, positioning it
+ * with fixed coordinates (see tableOperateMenu* in custom.js). No
+ * clipping ancestor is left, so the menu may overlap the table,
+ * card and pagination freely.
+ *
+ * Because the menu leaves the table, every style the bundle and
+ * custom.css scoped to .bootstrap-table / table[data-toggle="table"]
+ * must be re-declared for the body-level clone below — otherwise it
+ * falls back to the plain bootstrap .dropdown-menu look.
+ * ============================================================ */
+
+/* 1. Clipping container keeps the rounded border. Only the two
+      properties the bundle overrode are restored (overflow + the
+      right border it dropped); radius/padding are left as-is so the
+      container keeps matching the card radius. */
+.bootstrap-table .fixed-table-container {
+    overflow: hidden !important;
+    border-right: 1px solid var(--ta-border, #e2e8f0) !important;
+}
+html[data-theme-mode="dark"] .bootstrap-table .fixed-table-container,
+body[data-theme-mode="dark"] .bootstrap-table .fixed-table-container {
+    border-right-color: var(--ta-border, #344054) !important;
+}
+/* Horizontal scroll for narrow screens stays available; the vertical
+   axis stays a clipping box because the spec forces it to be. */
+.bootstrap-table .fixed-table-body {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+}
+
+/* 2. Body-level operate menu (detached by custom.js).
+      position/top/left are placeholders — custom.js overwrites them
+      with the measured coordinates; right/bottom/float/transform
+      must be neutralised so nothing stretches the box. */
+body > .dropdown-menu.table-operate-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: auto;
+    float: none;
+    margin: 0;
+    transform: none;
+    will-change: auto;
+    z-index: 99999 !important;
+    min-width: 8rem;
+    padding: 0.35rem 0;
+    max-height: 300px;
+    overflow-y: auto;
+    border-radius: var(--ta-radius-lg, 0.5rem) !important;
+    box-shadow: var(--ta-shadow-md, 0px 4px 12px rgba(16, 24, 40, 0.12)) !important;
+}
+/* Dark mode: same lighter surface the in-table menu had, so the
+   detached clone is visually identical (mirrors the rules that were
+   scoped to table[data-toggle="table"] .dropdown-menu). */
+html[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu,
+body[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu {
+    background-color: #243044 !important;
+    border-color: #475467 !important;
+}
+html[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu .dropdown-item,
+body[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu .dropdown-item {
+    color: #e4e7ec !important;
+}
+html[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu .dropdown-item:hover,
+html[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu .dropdown-item:focus,
+body[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu .dropdown-item:hover,
+body[data-theme-mode="dark"] body > .dropdown-menu.table-operate-menu .dropdown-item:focus {
+    background-color: #344054 !important;
+    color: #fff !important;
+}
+
+/* ============================================================
+ * Submit-button loading state (global, all type=submit)
+ * JS adds .btn-loading + prepends <i class="fas fa-spinner fa-spin">
+ * on form submit; spinner shows until navigation / AJAX complete.
+ * ============================================================ */
+button[type="submit"].btn-loading {
+    pointer-events: none;
+    opacity: 0.85;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+button[type="submit"].btn-loading .fa-spinner,
+button[type="submit"].btn-loading .fa-circle-notch {
+    margin-right: 0;
+}
+
+
+
+
+

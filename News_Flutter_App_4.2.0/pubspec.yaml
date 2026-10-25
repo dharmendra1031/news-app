@@ -1,0 +1,119 @@
+name: news
+# news
+description: A new Flutter project.
+
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+ 
+version: 4.2.0+61
+# 1.0.0+1
+
+environment:
+  sdk: ">=3.4.3 <4.0.0"
+ 
+dependencies:
+  flutter:
+    sdk: flutter
+ 
+  flutter_svg: ^2.0.7  
+  connectivity_plus: ^7.0.0 
+  country_picker: ^2.0.27
+  sms_autofill: ^2.0.1
+  location: ^8.0.0
+  intl: ^0.20.1
+  firebase_core: ^4.1.0
+  firebase_messaging: ^16.0.1
+  firebase_auth: ^6.0.2
+  google_sign_in: ^6.2.1  
+  photo_view: ^0.15.0
+  url_launcher: ^6.0.10
+  shimmer: ^3.0.0
+  share_plus: ^12.0.1
+  flutter_tts: ^4.0.2
+  image_picker: ^1.2.1  
+  file_picker: ^10.3.8
+  video_player: ^2.9.1 
+  flick_video_player: ^0.9.0
+  youtube_player_flutter: ^9.0.1
+  youtube_parser: ^2.1.4 
+  in_app_review: ^2.0.3 
+  flutter_local_notifications: ^22.0.0
+  path_provider: ^2.1.5
+  flutter_login_facebook: ^3.0.1 #Facebook Login; must stay on FBSDK 18 to match facebook_app_events
+  facebook_app_events: ^0.30.5 #Facebook App Events (Meta Pixel); separate from Facebook Login
+  sign_in_with_apple: ^7.0.1
+  crypto: ^3.0.1 
+  percent_indicator: ^4.0.0
+  google_mobile_ads: ^6.0.0 
+  flutter_widget_from_html: ^0.17.1 #For News Details Screen
+  unity_ads_plugin: 0.4.0
+  # 0.3.29
+  flutter_inappwebview: ^6.1.5
+  flutter_bloc: ^9.0.0
+  dio: ^5.0.1
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  equatable: ^2.0.5 
+  dotted_border: ^3.1.0
+  marqueer: ^2.0.1
+  flutter_launcher_icons: ^0.14.4
+  change_app_package_name: ^1.5.0
+
+  xml: ^6.5.0
+  http: ^1.2.2
+  xml2json: ^6.2.5
+
+  package_info_plus: ^9.0.0
+  html_editor_plus: ^0.0.7
+
+  firebase_analytics: ^12.0.4
+  flutter_pdfview: ^1.4.4
+  timeago: ^3.7.1
+
+  media_kit: ^1.2.6
+  media_kit_video: ^2.0.1
+  media_kit_libs_video: ^1.0.7
+  just_audio: ^0.10.6
+  just_audio_background: ^0.0.1-beta.17
+  background_downloader: ^9.5.6
+  youtube_explode_dart: ^3.1.0
+  cached_network_image: ^3.4.1
+
+dependency_overrides:
+  modal_bottom_sheet: ^3.0.0-pre 
+ 
+ 
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  bloc_test: ^10.0.0
+  mocktail: ^1.0.4
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/appLogo.png"
+  remove_alpha_ios: true
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/images/svgImage/
+    - assets/languages/
+    
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: assets/font/Roboto-Regular.ttf
+          weight: 400
+        - asset: assets/font/Roboto-Light.ttf
+          weight: 300
+        - asset: assets/font/Roboto-Medium.ttf
+          weight: 500
+        - asset: assets/font/Roboto-SemiBold.ttf
+          weight: 600
+        - asset: assets/font/Roboto-Bold.ttf
+          weight: 700

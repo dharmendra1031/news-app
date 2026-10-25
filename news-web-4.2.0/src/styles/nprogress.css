@@ -1,0 +1,13 @@
+#nprogress .bar {
+  height: 5px !important;
+  /* Adjust the height as per your preference */
+  background: var(--primary-color) !important;
+}
+
+#nprogress .peg {
+  box-shadow: none !important;
+}
+
+#nprogress .spinner-icon {
+  display: none !important;
+}

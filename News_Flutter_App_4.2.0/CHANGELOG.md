@@ -1,0 +1,5 @@
+# Changelog
+
+## [4.2.0] - 2026-10-08
+
+- UI improvements on the Home screen (new Live News, Video News and Short News sections, refreshed section styles, banner dots, dates and view counts, dark mode) and the News Detail screen (Figma-aligned layout, dark mode, spacing).

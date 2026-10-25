@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">News App</string>
+    <string name="facebook_app_id">3187011931582004</string>
+    <string name="fb_login_protocol_scheme">fb3187011931582004</string>
+    <string name="facebook_client_token">c5fcb2473b8557c9ff049dd807db8240</string>
+    <!-- Facebook App Events (Meta Pixel). Separate Meta app from the Facebook Login ids above. -->
+    <string name="facebook_events_app_id">Enter_your_Facebook_event_app_id_here</string>
+    <string name="facebook_events_client_token">Enter_your_Facebook_event_client_token_id_here</string>
+    <string name="facebook_events_display_name">Enter_your_Facebook_event_Display_Name_here</string>
+</resources>

@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+**/local.properties
+node_modules/
+vendor/
+.dart_tool/
+.next/
+build/
+dist/
+Admin_Panel_PHP_Code_4.2.0/update/*.zip
